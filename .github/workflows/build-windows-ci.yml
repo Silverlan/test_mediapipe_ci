@@ -42,6 +42,7 @@ jobs:
           token: '${{ secrets.REPO_ACCESS_TOKEN }}'
           repository: 'Silverlan/pr_mediapipe'
           debug-artifact-token: ${{ secrets.GITHUB_TOKEN }}
+          build-args: '--access-token-mediapipe_wrapper=${{ secrets.PR_MEDIAPIPE_WRAPPER_ACCESS_TOKEN }}'
 
       - name: Create Release Files
         shell: bash
